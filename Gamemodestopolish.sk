@@ -1,0 +1,15 @@
+#tryb dla essentialsx
+command /tryb [<text>] [<text>]:
+    trigger:
+        if arg 1 is not set:
+            send "Zagubiłeś się? To proste wpisz /tryb <tryb> albo /tryb <tryb> <gracz>!"
+        if arg 1 is "kreatywny":
+            execute player command "gamemode creative"
+        if arg 1 is "przetrwanie":
+            execute player command "gamemode survival"
+        if arg 1 is "widz":
+            execute player command "gamemode spectator"
+        if arg 1 is "gosc":
+            execute player command "gamemode adventrue"        
+        if arg 2 is set:
+            execute player command "gamemode %argument 1% %argument 2%"
